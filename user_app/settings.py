@@ -24,9 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    '.herokuapp.com',
-]
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -41,6 +39,7 @@ INSTALLED_APPS = [
     'inventory.apps.InventoryConfig',
 ]
 CSRF_COOKIE_SECURE = True
+CSRF_TRUSTED_ORIGINS = ['https://*.herokuapp.com', 'https://*.127.0.0.1']
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
