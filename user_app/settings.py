@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'inventory.apps.InventoryConfig',
 ]
-
+CSRF_COOKIE_SECURE = True
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
